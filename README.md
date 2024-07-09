@@ -8,7 +8,6 @@
 ## Download pre-training weights
 1. Download our weights at the following address：`https://pan.baidu.com/s/1XErEnN991n5xBT5vzkbVFQ?pwd=wh6a`
 `password：wh6a `
---来自百度网盘超级会员V5的分享
 
 ### traffic object detection task of UF-Net 
 
