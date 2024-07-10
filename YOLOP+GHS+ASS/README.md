@@ -1,7 +1,6 @@
 <div align="left">   
 
-## You Only :eyes: Once for Panoptic ​ :car: Perception
-> [**You Only Look at Once for Panoptic driving Perception**](https://link.springer.com/article/10.1007/s11633-022-1339-y)
+  ## YOLOP+GHS+ASS
 >
 > by Dong Wu, Manwen Liao, Weitian Zhang, [Xinggang Wang](https://xwcv.github.io/)<sup> :email:</sup>, [Xiang Bai](https://scholar.google.com/citations?user=UeltiQ4AAAAJ&hl=zh-CN), [Wenqing Cheng](http://eic.hust.edu.cn/professor/chengwenqing/), [Wenyu Liu](http://eic.hust.edu.cn/professor/liuwenyu/)      [*School of EIC, HUST*](http://eic.hust.edu.cn/English/Home.htm)
 >
@@ -11,9 +10,9 @@
 
 ---
 
-[中文文档](https://github.com/hustvl/YOLOP/blob/main/README%20_CH.md)
 
-### The Illustration of YOLOP
+
+### The Illustration of YOLOP+GHS+ASS
 
 ![yolop](pictures/yolop.png)
 
@@ -159,11 +158,7 @@
 
 ### Requirement
 
-This codebase has been developed with python version 3.7, PyTorch 1.7+ and torchvision 0.8+:
 
-```
-conda install pytorch==1.7.0 torchvision==0.8.0 cudatoolkit=10.2 -c pytorch
-```
 
 See `requirements.txt` for additional dependencies and version requirements.
 
@@ -287,9 +282,6 @@ python tools/demo.py --source 0
 
 
 
-### Deployment
-
-Our model can reason in real-time on `Jetson Tx2`, with `Zed Camera` to capture image. We use `TensorRT` tool for speeding up. We provide code for deployment and reasoning of model in  `./toolkits/deploy`.
 
 
 
@@ -303,45 +295,8 @@ python toolkits/datasetpre/gen_bdd_seglabel.py
 
 
 
-#### Model Transfer
-
-Before reasoning with TensorRT C++ API, you need to transfer the `.pth` file into binary file which can be read by C++.
-
-```shell
-python toolkits/deploy/gen_wts.py
-```
-
-After running the above command, you obtain a binary file named `yolop.wts`.
 
 
 
-#### Running Inference
 
-TensorRT needs an engine file for inference. Building an engine is time-consuming. It is convenient to save an engine file so that you can reuse it every time you run the inference. The process is integrated in `main.cpp`. It can determine whether to build an engine according to the existence of your engine file.
-
-
-
-### Third Parties Resource  
-* YOLOP OpenCV-DNN C++ Demo: [YOLOP-opencv-dnn](https://github.com/hpc203/YOLOP-opencv-dnn) from [hpc203](https://github.com/hpc203)  
-* YOLOP ONNXRuntime C++ Demo: [lite.ai.toolkit](https://github.com/DefTruth/lite.ai.toolkit/blob/main/lite/ort/cv/yolop.cpp) from [DefTruth](https://github.com/DefTruth)  
-* YOLOP NCNN C++ Demo: [YOLOP-NCNN](https://github.com/EdVince/YOLOP-NCNN) from [EdVince](https://github.com/EdVince)  
-* YOLOP MNN C++ Demo: [YOLOP-MNN](https://github.com/DefTruth/lite.ai.toolkit/blob/main/lite/mnn/cv/mnn_yolop.cpp) from [DefTruth](https://github.com/DefTruth) 
-* YOLOP TNN C++ Demo: [YOLOP-TNN](https://github.com/DefTruth/lite.ai.toolkit/blob/main/lite/tnn/cv/tnn_yolop.cpp) from [DefTruth](https://github.com/DefTruth) 	
-
-
-
-## Citation
-
-If you find our paper and code useful for your research, please consider giving a star :star:   and citation :pencil: :
-
-```BibTeX
-@article{wu2022yolop,
-  title={Yolop: You only look once for panoptic driving perception},
-  author={Wu, Dong and Liao, Man-Wen and Zhang, Wei-Tian and Wang, Xing-Gang and Bai, Xiang and Cheng, Wen-Qing and Liu, Wen-Yu},
-  journal={Machine Intelligence Research},
-  pages={1--13},
-  year={2022},
-  publisher={Springer}
-}
-```
 
