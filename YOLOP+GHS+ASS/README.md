@@ -118,34 +118,8 @@ We recommend the dataset directory structure to be the following:
 
 Update the your dataset path in the `./lib/config/default.py`.
 
-### Training
 
-You can set the training configuration in the `./lib/config/default.py`. (Including:  the loading of preliminary model,  loss,  data augmentation, optimizer, warm-up and cosine annealing, auto-anchor, training epochs, batch_size).
 
-If you want try alternating optimization or train model for single task, please modify the corresponding configuration in `./lib/config/default.py` to `True`. (As following, all configurations is `False`, which means training multiple tasks end to end).
-
-```python
-# Alternating optimization
-_C.TRAIN.SEG_ONLY = False           # Only train two segmentation branchs
-_C.TRAIN.DET_ONLY = False           # Only train detection branch
-_C.TRAIN.ENC_SEG_ONLY = False       # Only train encoder and two segmentation branchs
-_C.TRAIN.ENC_DET_ONLY = False       # Only train encoder and detection branch
-
-# Single task 
-_C.TRAIN.DRIVABLE_ONLY = False      # Only train da_segmentation task
-_C.TRAIN.LANE_ONLY = False          # Only train ll_segmentation task
-_C.TRAIN.DET_ONLY = False          # Only train detection task
-```
-
-Start training:
-
-```shell
-python tools/train.py
-```
-Multi GPU mode:
-```shell
-python -m torch.distributed.launch --nproc_per_node=N tools/train.py  # N: the number of GPUs
-```
 
 
 ### Evaluation
