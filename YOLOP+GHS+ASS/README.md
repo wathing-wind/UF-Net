@@ -31,6 +31,7 @@
 | `YOLOv5s`      | 86.8      | 77.2     | 82         |
 | `YOLOP`        | 89.2      | 76.5     | 41         |
 | `YOLOP+GHS`    | 91.7      | 83.6     | 43.7       |
+| `YOLOP+GHS+ASS`| -      | 84.6     | 42.9       |
 #### Drivable Area Segmentation Result
 
 | Model         | mIOU(%) | Speed(fps) |
@@ -40,6 +41,7 @@
 | `PSPNet`      | 89.6    | 11.1       |
 | `YOLOP`       | 91.5    | 41         |
 | `YOLOP+GHS`   | 92.5    | 43.7       |
+| `YOLOP+GHS+ASS`| 92.6     | 42.9       |
 #### Lane Detection Result:
 
 | Model         |  IOU(%) |
@@ -49,7 +51,7 @@
 | `ENet-SAD`    |  16.02  |
 | `YOLOP`       |  26.20  |
 | `YOLOP+GHS`   |   27.5  |
-
+| `YOLOP+GHS+ASS`   |   31.1  |
 
 ### Visualization
 
