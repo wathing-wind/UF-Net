@@ -30,6 +30,7 @@ test：`python mmsegmentation/tools/test.py mmsegmentation/configs/mtl_ad/task_d
 | `YOLO v5 (Jocher et al., 2020)`      | CSPDarknet     | 86.8       | 77.2      |
 | `UF-Net-T (ours)`                    | ResNet-18      | 92.3       | 79.2      |
 | `UF-Net-S (ours)`                    | ResNet-34      | 93.3       | 80.1      |
+
 ### drivable area segmentation of UF-Net
 
 test：`python mmsegmentation/tools/test.py mmsegmentation/configs/mtl_ad/task_culane.py path/to/your/weights`
@@ -80,3 +81,10 @@ test：`python mmsegmentation/tools/test.py mmsegmentation/configs/mtl_ad/task_s
 
 test：`python tools/test.py --weights path/to/your/weights`
 
+
+### Quantitative comparison of UF-Net and baseline models
+![]()
+![]()
+![]()
+![]()
+![]()
