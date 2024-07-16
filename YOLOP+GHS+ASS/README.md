@@ -159,9 +159,6 @@ python tools/test.py --weights weights/End-to-end.pth
 
 
 
-### Demo Test
-
-We provide two testing method.
 
 #### Folder
 
