@@ -21,6 +21,24 @@
 
 ### Results
 
+Comparison with the multi-task model on the BDD100K dataset
+
+| Model                              | Drivable area mIoU (%) | Object detection mAP50 (%) | Lane detection IoU (%) | Number of parameters | M-Score | Speed (FPS) |
+| ---------------------------------- | ---------------------- | ------------------------- | --------------------- | ------------------- | ------- | ----------- |
+| MultiNet (Teichmann et al., 2018)  | 71.6                   | 60.2                      | -                     | 35.6M                | -       | 12.6        |
+| DLT-Net (Teichmann et al., 2018)   | 72.1                   | 68.4                      | -                     | -                    | -       | 9.3         |
+| YOLOPv2 (Han et al., 2022)         | 93.2                   | 83.2                      | 27.2                  | 38.9M                | 203.6   | 34.7        |
+| HybridNets (Vu et al., 2022)       | 90.5                   | 77.3                      | 31.6                  | 12.8M                | 199.4   | 36.0        |
+| VGG16-BiFPN (Abdiqapparov et al., 2022) | 76.1               | 70.1                      | 20.4                  | 17.7M                | 166.6   | 38.0        |
+| YOLO-ODL (Guo et al., 2023)        | 92.3                   | 79.7                      | 27.5                  | 17.7M                | 199.5   | 94.7        |
+| Miraliev et al. (Miraliev et al., 2023) | 91.9                 | 77.5                      | 33.8                  | 6.52M                | 200.3   | 46.9        |
+| Hybrid CNN+PVT (Usman et al., 2024) | 93.1                  | 79.2                      | 27.8                  | 8.13M                | 200.0   | 7.25        |
+| A-YOLOM (Wang et al., 2024)        | 91.0                   | 81.1                      | 28.8                  | 13.61M               | 200.9   | 39.7        |
+| YOLOP (Wu et al., 2022)            | 91.5                   | 76.5                      | 26.2                  | 8.25M                | 194.2   | 42.0        |
+| Ours (YOLOP+GHS)                   | 92.5                   | 83.6                      | 27.5                  | 8.25M                | 203.6   | 43.7        |
+| Ours (YOLOP+GHS+ASS)               | 92.6                   | 84.6                      | 31.1                  | 13.36M               | 208.3   | 42.9        |
+
+你可以将这个Markdown格式的表格复制到你的GitHub README文件中使用。如果有任何其他问题或需要进一步的帮助，请告诉我！
 #### Traffic Object Detection Result
 
 | Model          | Recall(%) | mAP50(%) | Speed(fps) |
@@ -31,7 +49,7 @@
 | `YOLOv5s`      | 86.8      | 77.2     | 82         |
 | `YOLOP`        | 89.2      | 76.5     | 41         |
 | `YOLOP+GHS`    | 91.7      | 83.6     | 43.7       |
-| `YOLOP+GHS+ASS`| -      | 84.6     | 42.9       |
+| `YOLOP+GHS+ASS`| -         | 84.6     | 42.9       |
 #### Drivable Area Segmentation Result
 
 | Model         | mIOU(%) | Speed(fps) |
@@ -55,16 +73,21 @@
 
 ### Visualization
 
+#### Panoptic
+![](pictures/test/all.jpg)
+
+
 #### Traffic Object Detection Result
+![](pictures/test/onlydet.jpg)
 
 
 
 #### Drivable Area Segmentation Result
-
+![](pictures/test/only_da.jpg)
 
 
 #### Lane Detection Result
-
+![](pictures/test/only_ll.jpg)
 
 
 **Notes**: 
