@@ -1,8 +1,14 @@
 # UF-Net
-
 - `mmyolo`: contains the code for UF-Net's traffic object detection task.
 - `mmsegmentation`: contains code for lane line detection and segmentation of the drivable area.
 - `YOLOP+GHS+ASS`: code containing the supplementary experimental part of the article.
+
+### The Illustration of UF-Net
+
+![UF-Net](readme_pic/structure_00.jpg)
+The proposed two training stages and inference process, where (a) and (b) introduce the universal feature learning stage and the task-
+specific feature learning stage respectively, (c) demonstrates the inference process, and (d) briefly shows the implementation process of adaptive
+sharing scheme (ASS).
 ## Requirement
  `pip install -r requirements.txt`
 ## Download pre-training weights
@@ -83,8 +89,13 @@ test：`python tools/test.py --weights path/to/your/weights`
 
 
 ### Quantitative comparison of UF-Net and baseline models
-![]()
-![]()
-![]()
-![]()
-![]()
+#### Comparison of drivable area segmentation
+![](readme_pic/drivable_area_comp.jpg)
+
+#### Comparison of lane line detection
+![](readme_pic/lane_line_comp.jpg)
+
+#### Comparison of traffic object detection
+![](readme_pic/traffic_object_comp.jpg)
+
+
