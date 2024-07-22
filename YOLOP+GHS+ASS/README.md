@@ -3,12 +3,6 @@
 
 ## YOLOP+GHS+ASS
 
->
-> Zilong Zhou, Ping Liu, Haibo Huang
->
-> 
->
-> 
 
 
 ### Contributions
