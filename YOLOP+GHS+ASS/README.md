@@ -38,7 +38,6 @@ Comparison with the multi-task model on the BDD100K dataset
 | Ours (YOLOP+GHS)                   | 92.5                   | 83.6                      | 27.5                  | 8.25M                | 203.6   | 43.7        |
 | Ours (YOLOP+GHS+ASS)               | 92.6                   | 84.6                      | 31.1                  | 13.36M               | 208.3   | 42.9        |
 
-你可以将这个Markdown格式的表格复制到你的GitHub README文件中使用。如果有任何其他问题或需要进一步的帮助，请告诉我！
 #### Traffic Object Detection Result
 
 | Model          | Recall(%) | mAP50(%) | Speed(fps) |
