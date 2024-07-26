@@ -87,6 +87,23 @@ test：`python mmsegmentation/tools/test.py mmsegmentation/configs/mtl_ad/task_s
 
 test：`python tools/test.py --weights path/to/your/weights`
 
+Comparison with the multi-task model on the BDD100K dataset
+
+| Model                              | Drivable area mIoU (%) | Object detection mAP50 (%) | Lane detection IoU (%) | Number of parameters | M-Score | Speed (FPS) |
+| ---------------------------------- | ---------------------- | ------------------------- | --------------------- | ------------------- | ------- | ----------- |
+| MultiNet (Teichmann et al., 2018)  | 71.6                   | 60.2                      | -                     | 35.6M                | -       | 12.6        |
+| DLT-Net (Teichmann et al., 2018)   | 72.1                   | 68.4                      | -                     | -                    | -       | 9.3         |
+| YOLOPv2 (Han et al., 2022)         | 93.2                   | 83.2                      | 27.2                  | 38.9M                | 203.6   | 34.7        |
+| HybridNets (Vu et al., 2022)       | 90.5                   | 77.3                      | 31.6                  | 12.8M                | 199.4   | 36.0        |
+| VGG16-BiFPN (Abdiqapparov et al., 2022) | 76.1               | 70.1                      | 20.4                  | 17.7M                | 166.6   | 38.0        |
+| YOLO-ODL (Guo et al., 2023)        | 92.3                   | 79.7                      | 27.5                  | 17.7M                | 199.5   | 94.7        |
+| Miraliev et al. (Miraliev et al., 2023) | 91.9                 | 77.5                      | 33.8                  | 6.52M                | 200.3   | 46.9        |
+| Hybrid CNN+PVT (Usman et al., 2024) | 93.1                  | 79.2                      | 27.8                  | 8.13M                | 200.0   | 7.25        |
+| A-YOLOM (Wang et al., 2024)        | 91.0                   | 81.1                      | 28.8                  | 13.61M               | 200.9   | 39.7        |
+| YOLOP (Wu et al., 2022)            | 91.5                   | 76.5                      | 26.2                  | 8.25M                | 194.2   | 42.0        |
+| Ours (YOLOP+GHS)                   | 92.5                   | 83.6                      | 27.5                  | 8.25M                | 203.6   | 43.7        |
+| Ours (YOLOP+GHS+ASS)               | 92.6                   | 84.6                      | 31.1                  | 13.36M               | 208.3   | 42.9        |
+
 
 ### Quantitative comparison of UF-Net and baseline models
 #### Comparison of drivable area segmentation
